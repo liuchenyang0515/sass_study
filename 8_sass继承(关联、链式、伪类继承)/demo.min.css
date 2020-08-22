@@ -1,0 +1,1 @@
+.div,.divext{border:1px;background-color:red}.divext{border-width:3px}.div1,.divext,.div2,.div3{border:1px;background-color:red}.div1.other,.other.divext,.other.div2,.other.div3{background-image:url("hello.jpeg")}.div1,.divext,.div2,.div3{border:1px solid #000;color:blue}.div2,.div3{color:red}.div3{color:#000}a:hover,a.hoverlink{text-decoration:underline}.hoverlink{color:red}

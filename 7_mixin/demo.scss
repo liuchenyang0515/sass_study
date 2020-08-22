@@ -1,0 +1,38 @@
+/*一般的mixin*/
+@mixin helloMixin {
+    display: inline-block;
+    padding: 20px; 
+    font: {
+        size: 20px;
+        weight: 500;
+    };
+    color: red;
+}
+
+/* 嵌套mixin */
+@mixin helloMixin2 {
+    padding: 10px; // 按引入顺序，后续padding会有2个
+    @include helloMixin();
+    background-color: red;
+}
+
+
+/* 参数mixin */
+@mixin sexy-border($color, $width) {
+    border: {
+        color: $color;
+        width: $width;
+        style: dashed;
+    };
+}
+
+.div {
+    width: 100px;
+    @include helloMixin2;
+}
+
+.div {
+    @include sexy-border(blue, 2px)
+    // 混合指令的用法在@mixin后面添加名称与样式以及需要的参数（可选），
+    // 并且使用@include指令引用混合样式
+}

@@ -1,0 +1,15 @@
+@import 'base';
+$width: 300px;
+
+$color: #e03434;
+
+.div1 {
+    height: $width;
+    $widthInner: 100px;
+    width: $widthInner;
+}
+
+.div2 {
+    width: $width;
+    // height: $widthInner; //  报错找不到
+}

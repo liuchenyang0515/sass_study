@@ -1,0 +1,15 @@
+@charset "UTF-8";
+.div {
+  width: 300px;
+}
+
+/* 加减乘除 */
+.div {
+  font: 10px/8px;
+  font: 1.25px;
+  font: 80px;
+  width: 150px;
+  margin-left: 9px;
+}
+
+/*颜色运算*/

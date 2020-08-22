@@ -1,0 +1,26 @@
+$width: 300px;
+$height: 300px;
+
+$str: 'hello.jpeg';
+$strNoquote: abcd;
+$color: #e03434;
+
+$class: '.div2';
+$styleKey: width;
+.div1 {
+    width: $width;
+    height: $height;
+    background-color: $color;
+    // background-image: url('./img/'+$strNoquote);
+    background-image: url('./img/#{$strNoquote}');
+}
+
+#{$class} {
+    width: $width;
+    height: $height;
+}
+
+#{$class}2 {
+    #{$styleKey}: $width;
+
+}
