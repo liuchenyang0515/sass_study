@@ -1,0 +1,47 @@
+$number: 70;
+$number2: 71;
+
+$numberPercent: 0.7;
+$numberRound: 25.9;
+$numberPercent: 0.7;
+$abs: -3;
+
+/*number*/
+.div {
+    zoom: percentage($numberPercent); // 其实就是乘以100再加上%
+    zoom: round($numberRound);
+    zoom: ceil($numberRound);
+    zoom: floor($numberRound);
+
+    zoom: abs($abs);
+
+    zoom: min($number, $number2);
+    zoom: max($number, $number2);
+
+    zoom: random(10); // 默认从0--1，写参数是闭区间
+}
+
+/*list*/
+$list:(1, 'p', 3, 4, 5);
+.div {
+    zoom: length($list); 
+    zoom: nth($list, 2); // 获取指定下标的元素，从1开始
+    /* 实时打印结果*/
+    @debug set-nth($list, 1, 'x'); // 当前目录执行sass –-watch debug.scss:debug.css就会看到terminal打印信息
+    @debug join($list, (6, 7, 8));
+    @debug append($list, '999');
+    @debug index($list, 'p');
+}
+
+/*string*/
+$string: 'hello';
+$stringNo: hello2;
+.div {
+    background-image: unquote($string); // 去掉引号
+    background-image: quote($stringNo); // 加上引号
+    background-image: str-length($string); // string长度
+    @debug str-insert($string, 'p', 2);// 可以写成键值对传参
+    @debug str-index($string, $substring: "o"); // 从1开始第一次出现位置，等同于@debug str-index($string, "o");
+    background-image: to-upper-case($string);
+    background-image: to-lower-case($string);
+}

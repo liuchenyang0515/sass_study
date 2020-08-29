@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/*number*/
+.div {
+  zoom: 70%;
+  zoom: 26;
+  zoom: 26;
+  zoom: 25;
+  zoom: 3;
+  zoom: 70;
+  zoom: 71;
+  zoom: 6;
+}
+
+/*list*/
+.div {
+  zoom: 5;
+  zoom: "p";
+  /* 实时打印结果*/
+}
+
+/*string*/
+.div {
+  background-image: hello;
+  background-image: "hello2";
+  background-image: 5;
+  background-image: "HELLO";
+  background-image: "hello";
+}
